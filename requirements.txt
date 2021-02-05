@@ -1,0 +1,12 @@
+asgiref
+certifi
+chardet
+defusedxml
+Django
+idna
+oauthlib
+python3-openid
+pytz
+six
+sqlparse
+urllib3
