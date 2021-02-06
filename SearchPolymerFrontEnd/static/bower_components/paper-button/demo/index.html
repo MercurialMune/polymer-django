@@ -1,11 +1,11 @@
 <!doctype html>
 <!--
 @license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+Copyright (c) 2021 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the JSSortPolymerFrontend project is also
+Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
@@ -25,15 +25,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../../paper-styles/color.html">
   <link rel="import" href="../paper-button.html">
 
-  <style is="custom-style" include="demo-pages-shared-styles">
-    .vertical-section-container {
-      max-width: 500px;
-    }
-    paper-button {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  </style>
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+      .vertical-section-container {
+        max-width: 500px;
+      }
+      paper-button {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    </style>
+  </custom-style>
 </head>
 <body unresolved>
   <div class="vertical-section-container centered">
@@ -113,6 +115,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
           paper-button.disabled {
             color: white;
+          }
+        </style>
+      </template>
+    </demo-snippet>
+
+    <h3>Buttons can be used as a link</h3>
+    <demo-snippet class="centered-demo">
+      <template>
+        <a href="https://www.polymer-project.org/" tabindex="-1">
+          <paper-button raised>Polymer Project</paper-button>
+        </a>
+        <style>
+          a paper-button,
+          a:active paper-button,
+          a:visited paper-button {
+            color: #000;
           }
         </style>
       </template>

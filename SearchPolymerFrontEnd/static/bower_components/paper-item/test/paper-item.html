@@ -1,10 +1,10 @@
 <!--
 @license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+Copyright (c) 2021 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the JSSortPolymerFrontend project is also
+Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <!doctype html>
@@ -33,6 +33,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <template>
         <div role="listbox">
           <paper-item>item</paper-item>
+        </div>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="button">
+      <template>
+        <div role="listbox">
+          <button class="paper-item" role="option">item</button>
         </div>
       </template>
     </test-fixture>
@@ -81,21 +89,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         test('space triggers a click event', function(done) {
           MockInteractions.pressSpace(item);
-          Polymer.Base.async(function(){
+          Polymer.Base.async(function() {
             // You need two ticks, one for the MockInteractions event, and one
             // for the button event.
-            Polymer.Base.async(function(){
+            Polymer.Base.async(function() {
               expect(clickHandler.callCount).to.be.equal(1);
               done();
             }, 1);
           }, 1);
         });
 
-        test('click triggers a click event', function(done) {
-          MockInteractions.tap(item);
-          Polymer.Base.async(function(){
-            expect(clickHandler.callCount).to.be.equal(1);
-            done();
+        test('enter triggers a click event', function(done) {
+          MockInteractions.pressEnter(item);
+          Polymer.Base.async(function() {
+            // You need two ticks, one for the MockInteractions event, and one
+            // for the button event.
+            Polymer.Base.async(function() {
+              expect(clickHandler.callCount).to.be.equal(1);
+              done();
+            }, 1);
           }, 1);
         });
       });
@@ -111,10 +123,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         test('space triggers a click event', function(done) {
           MockInteractions.pressSpace(item);
-          Polymer.Base.async(function(){
+          Polymer.Base.async(function() {
             // You need two ticks, one for the MockInteractions event, and one
             // for the button event.
-            Polymer.Base.async(function(){
+            Polymer.Base.async(function() {
               expect(clickHandler.callCount).to.be.equal(1);
               done();
             }, 1);
@@ -123,7 +135,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         test('click triggers a click event', function(done) {
           MockInteractions.tap(item);
-          Polymer.Base.async(function(){
+          Polymer.Base.async(function() {
             expect(clickHandler.callCount).to.be.equal(1);
             done();
           }, 1);
@@ -131,52 +143,58 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       });
 
       suite('clickable element inside item', function() {
-        test('paper-item: space in child native input does not trigger a click event', function(done) {
-          var f = fixture('item-with-input');
-          var outerItem = f.querySelector('paper-item');
-          var innerInput = f.querySelector('input');
+        test(
+            'paper-item: space in child native input does not trigger a click event',
+            function(done) {
+              var f = fixture('item-with-input');
+              var outerItem = f.querySelector('paper-item');
+              var innerInput = f.querySelector('input');
 
-          var itemClickHandler = sinon.spy();
-          outerItem.addEventListener('click', itemClickHandler);
+              var itemClickHandler = sinon.spy();
+              outerItem.addEventListener('click', itemClickHandler);
 
-          innerInput.focus();
-          MockInteractions.pressSpace(innerInput);
-          Polymer.Base.async(function(){
-            expect(itemClickHandler.callCount).to.be.equal(0);
-            done();
-          }, 1);
-        });
+              innerInput.focus();
+              MockInteractions.pressSpace(innerInput);
+              Polymer.Base.async(function() {
+                expect(itemClickHandler.callCount).to.be.equal(0);
+                done();
+              }, 1);
+            });
 
-        test('paper-item: space in child paper-input does not trigger a click event', function(done) {
-          var f = fixture('item-with-paper-input');
-          var outerItem = f.querySelector('paper-item');
-          var innerInput = f.querySelector('paper-input');
+        test(
+            'paper-item: space in child paper-input does not trigger a click event',
+            function(done) {
+              var f = fixture('item-with-paper-input');
+              var outerItem = f.querySelector('paper-item');
+              var innerInput = f.querySelector('paper-input');
 
-          var itemClickHandler = sinon.spy();
-          outerItem.addEventListener('click', itemClickHandler);
+              var itemClickHandler = sinon.spy();
+              outerItem.addEventListener('click', itemClickHandler);
 
-          innerInput.focus();
-          MockInteractions.pressSpace(innerInput);
-          Polymer.Base.async(function(){
-            expect(itemClickHandler.callCount).to.be.equal(0);
-            done();
-          }, 1);
-        });
+              innerInput.focus();
+              MockInteractions.pressSpace(innerInput);
+              Polymer.Base.async(function() {
+                expect(itemClickHandler.callCount).to.be.equal(0);
+                done();
+              }, 1);
+            });
 
-        test('paper-icon-item: space in child input does not trigger a click event', function(done) {
-          var f = fixture('iconItem-with-input');
-          var outerItem = f.querySelector('paper-icon-item');
-          var innerInput = f.querySelector('input');
+        test(
+            'paper-icon-item: space in child input does not trigger a click event',
+            function(done) {
+              var f = fixture('iconItem-with-input');
+              var outerItem = f.querySelector('paper-icon-item');
+              var innerInput = f.querySelector('input');
 
-          var itemClickHandler = sinon.spy();
-          outerItem.addEventListener('click', itemClickHandler);
+              var itemClickHandler = sinon.spy();
+              outerItem.addEventListener('click', itemClickHandler);
 
-          MockInteractions.pressSpace(innerInput);
-          Polymer.Base.async(function(){
-            expect(itemClickHandler.callCount).to.be.equal(0);
-            done();
-          }, 1);
-        });
+              MockInteractions.pressSpace(innerInput);
+              Polymer.Base.async(function() {
+                expect(itemClickHandler.callCount).to.be.equal(0);
+                done();
+              }, 1);
+            });
       });
 
       suite('item a11y tests', function() {
@@ -196,9 +214,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
 
         a11ySuite('item');
+        a11ySuite('button');
         a11ySuite('iconItem');
       });
-
     </script>
 
   </body>

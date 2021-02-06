@@ -1,0 +1,379 @@
+[
+  {
+    "model":"Counties.counties",
+    "pk":1,
+    "fields":{
+      "county": "Nairobi",
+      "places":["Westlands","Parklands","Dagoretti","Karen","Langata","Kibira","Roysambu","Kasarani","Ruaraka","Kariobangi","Kayole","Embakasi","Mihang’o","Nairobi West","Makadara","kamukunji","Starehe","Mathare"]
+    }
+  },
+
+  {
+    "model":"Counties.counties",
+    "pk":2,
+    "fields":{
+      "county": "Bomet",
+      "places":["Sotik","Chepalungu","Bomet East","Bomet Central","Konoin"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":3,
+    "fields":{
+      "county": "Bungoma",
+      "places":["Mt. Elgon","Sirisia","Kabuchia","Bumula","Kandunyi","Webuye","Bokoli","Kimilili","Tongaren"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":4,
+    "fields":{
+      "county": "Busia",
+      "places":["Teso North","Teso South","Nambale","Matayos","Butula","Funyula","Budalangi"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":5,
+    "fields":{
+      "county": "Elgeyo Marakwet",
+      "places":["Marakwet East","Marakwet West","Keiyo East","Keiyo South"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":6,
+    "fields":{
+      "county": "Embu",
+      "places":["Manyatta","Runyenjes","Gachoka","Siakago"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":7,
+    "fields":{
+      "county": "Garissa",
+      "places":["TaveDujis","Balambala","Lagdera","Dadaab","Fafi","Ijara"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":8,
+    "fields":{
+      "county": "Homa Bay",
+      "places":["Kasipul","Kabondo","Karachuonyo","Rangwe","Homabay Town","Ndhiwa","Mbita","Gwassi"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":9,
+    "fields":{
+      "county": "Isiolo",
+      "places":["Isiolo North","Isiolo South"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":10,
+    "fields":{
+      "county": "Kajiado",
+      "places":["Kajiado Central","Kajiado North","Kajiado South"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":11,
+    "fields":{
+      "county": "Kakamega",
+      "places":["Lugari","Likuyani","Malava","Lurambi","Makholo","Mumias","Mumias East","Matungu","Butere","Khwisero","Shinyalu","Ikolomani","Kakamega Town"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":12,
+    "fields":{
+      "county": "Kericho",
+      "places":["Ainamoi","Belgut","Kipkelion"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":13,
+    "fields":{
+      "county": "Kiambu",
+      "places":["Gatundu South","Gatundu North","Juja","Thika Town","Ruiru","Githunguri","Kiambu","Kiambaa","Kabete","Kikuyu","Limuru","Lari"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":14,
+    "fields":{
+      "county": "Kilifi",
+      "places":["Kilifi North","Kilifi South","Kaloleni","Rabai","Ganze","Malindi","Magarini"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":15,
+    "fields":{
+      "county": "Kirinyaga",
+      "places":["Mwea","Gichugu","Ndia","Kirinyaga Central","Kerugoya Town"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":16,
+    "fields":{
+      "county": "Kisii",
+      "places":["Bonchari","South Mugirango","Bomachoge","Bobasi","Gucha","Nyaribari Masaba","Nyaribari Chache","Matrani","Mosocho"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":17,
+    "fields":{
+      "county": "Kisumu",
+      "places":["Kisumu East","Kisumu West","Kisumu Central","Seme","Nyando","Muhoroni","Nyakach"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":18,
+    "fields":{
+      "county": "Kitui",
+      "places":["Mwingi North","Mwingi Central","Mwingi South","Kitui West","Kitui Rural","Kitui Town","Mutitu","Kitui South"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":19,
+    "fields":{
+      "county": "Kwale",
+      "places":["Msambweni","Lunga Lunga","Matuga","Kinango"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":20,
+    "fields":{
+      "county": "Laikipia",
+      "places":["Laikipia West","Laikipia North","Laikipia East"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":21,
+    "fields":{
+      "county": "Lamu",
+      "places":["Lamu East","Lamu West"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":22,
+    "fields":{
+      "county": "Machakos",
+      "places":["Masinga","Yatta","Kangundo","Matungulu","Kathiani","Mavoko","Machakos Town","Mwala"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":23,
+    "fields":{
+      "county": "Makueni",
+      "places":["Mbooni","Kilome","Kaiti","Makueni","Kibwezi West","Kibwezi East"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":24,
+    "fields":{
+      "county": "Mandera",
+      "places":["Mandera West","Banisa","Mandera North","Mandera East","Lafey"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":25,
+    "fields":{
+      "county": "Marsabit",
+      "places":["Moyale","North Horr","Saku","Laisamis"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":26,
+    "fields":{
+      "county": "Meru",
+      "places":["Igembe South","Igembe Central","Igembe North","Tigania West","Tigania East","North Imenti","Buuri","Central Imenti","South Imenti"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":27,
+    "fields":{
+      "county": "Migori",
+      "places":["Rongo","Awendo","Migori East","Uriri","Migori West","Nyatike","Kuria East","Kuria West"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":28,
+    "fields":{
+      "county": "Mombasa",
+      "places":["Changamwe","Jomvu","Kisauni","Nyali","likoni","Mvita","Kwale"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":29,
+    "fields":{
+      "county": "Murang'a",
+      "places":["Kangema","Mathioya","Kiharu","Kigumo","Maragwa","Kandara","Gatanga"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":30,
+    "fields":{
+      "county": "Baringo",
+      "places":["Baringo East","Baringo West","Baringo Central","Mochongoi","Mogotio","Eldama Ravine"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":31,
+    "fields":{
+      "county": "Nakuru",
+      "places":["Molo","Njoro","Naivasha","Gilgil","Kuresoi South","Kuresoi North","Subukia","Rongai","Bahati","Nakuru Town West","Nakuru Town East"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":32,
+    "fields":{
+      "county": "Nandi",
+      "places":["Tinderet","Aldai","Nandi Hills","Emgwen North","Emgwen South","Mosop"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":33,
+    "fields":{
+      "county": "Narok",
+      "places":["Kilgoris","Emurua Dikirr","Narok North","Kajiado East","Kajiado West"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":34,
+    "fields":{
+      "county": "Nyamira",
+      "places":["Kitutu Masaba","North Mugirango","West Mugirango"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":35,
+    "fields":{
+      "county": "Nyandarua",
+      "places":["Kinangop","Kipipiri","Ol-Kalou","Ol-Jorok","Ndaragwa"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":36,
+    "fields":{
+      "county": "Nyeri",
+      "places":["Tetu","Kieni","Mathira","Othaya","Mukuwe-ini","Nyeri Town"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":37,
+    "fields":{
+      "county": "Samburu",
+      "places":["Samburu West","Samburu North","Samburu East"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":38,
+    "fields":{
+      "county": "Siaya",
+      "places":["Ugenya","Ugunja","Usonga","Alego","Gem","Bondo","Rarieda"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":39,
+    "fields":{
+      "county": "Taita Taveta",
+      "places":["Taveta","Wundanyi","Mwatate","Voi"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":40,
+    "fields":{
+      "county": "Tana River",
+      "places":["Garsen","Galole","Bura"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":41,
+    "fields":{
+      "county": "Tharaka Nithi",
+      "places":["Nithi","Maara","Tharaka"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":42,
+    "fields":{
+      "county": "Trans Nzoia",
+      "places":["Kwanza","Endebess","Saboti","Kiminini","Cherenganyi"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":43,
+    "fields":{
+      "county": "Turkana",
+      "places":["urkana North","Turkana West","Turkana East","Turkana Central","Loima","Turkana South"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":44,
+    "fields":{
+      "county": "Uasin Gishu",
+      "places":["Eldoret East","Eldoret North","Eldoret South"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":45,
+    "fields":{
+      "county": "Vihiga",
+      "places":["Sabatia","Vihiga","Hamisi","Emuhaya","Luanda"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":46,
+    "fields":{
+      "county": "Wajir",
+      "places":["Wajir North","Wajir East","Tarbaj","Wajir West","Eldas","Wajir South"]
+    }
+  },
+  {
+    "model":"Counties.counties",
+    "pk":47,
+    "fields":{
+      "county": "West Pokot",
+      "places":["Kapenguria","Sigor","Kacheliba","Pokot South"]
+    }
+  }
+]

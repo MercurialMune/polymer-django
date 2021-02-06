@@ -1,12 +1,14 @@
+import os
 from pathlib import Path
+from decouple import config
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'kh_x0i8j=lz6_0b*uynjp%1jqsho00hdpv9nl+8&i*&ba&-8#g'
-
-DEBUG = True
-
-ALLOWED_HOSTS = []
+MODE=config("MODE", default="dev")
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=True, cast=bool)
+ALLOWED_HOSTS=['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.auth',
@@ -14,6 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
     'SearchPolymerFrontEnd',
+    'Counties',
 ]
 
 MIDDLEWARE = [
@@ -24,6 +27,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'SearchDjangoBackEnd.urls'
@@ -36,19 +41,34 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
     },
 ]
 
 WSGI_APPLICATION = 'SearchDjangoBackEnd.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if config( 'MODE' ) == "dev":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': config( 'DB_NAME' ),
+            'USER': config( 'DB_USER' ),
+            'PASSWORD': config( 'DB_PASSWORD' ),
+            'HOST': config( 'DB_HOST' ),
+            'PORT': '',
+        }
+
     }
-}
+else:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=config( 'DATABASE_URL' )
+        )
+    }
+
+db_from_env = dj_database_url.config( conn_max_age=500 )
+DATABASES['default'].update( db_from_env )
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -72,3 +92,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = BASE_DIR/ 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'SearchPolymerFrontEnd/static']
+

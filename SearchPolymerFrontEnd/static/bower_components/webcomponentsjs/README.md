@@ -69,7 +69,7 @@ See the [contributing guide](CONTRIBUTING.md)
 
 Everything in this repository is BSD style license unless otherwise specified.
 
-Copyright (c) 2015 The Polymer Authors. All rights reserved.
+Copyright (c) 2021 The Polymer Authors. All rights reserved.
 
 ## Helper utilities
 
