@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS=['localhost', '127.0.0.1']
+ALLOWED_HOSTS=['localhost', '127.0.0.1', '35.226.148.52', 'interintel-two.cyprian.dev']
 
 INSTALLED_APPS = [
     'django.contrib.auth',
